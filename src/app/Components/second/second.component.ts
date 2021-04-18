@@ -29,11 +29,11 @@ export class SecondComponent {
       this.sliding = true;
       // while (this.sliding) {
       this.interval = setInterval(() => {
-        console.log(this.sliding);
+        // console.log(this.sliding);
         if (this.index == this.images.length - 1) this.index = -1;
         this.index++;
         this.image = this.images[this.index];
-      }, 5000);
+      }, 1000);
       // }
     }
   }
