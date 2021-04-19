@@ -1,15 +1,29 @@
-<p>students works!</p>
+<div *ngIf="allStudents.length > 0; then displayData; else displayNoData"></div>
+<ng-template #displayData>
+  <h2>Students</h2>
+  <h2>{{ allStudents.length }}</h2>
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Age</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of allStudents">
+        <td>{{ s.name }}</td>
+        <td>{{ s.age }}</td>
+      </tr>
+    </tbody>
+  </table>
+</ng-template>
+<ng-template #displayNoData>
+  <h2 style="color: red">There is No Data</h2>
+</ng-template>
 
-<h2>Students</h2>
-<table>
-  <thead>
-    <th>Name</th>
-    <th>Age</th>
-  </thead>
-  <tbody>
-    <tr *ngFor="let s of allStudents">
-      <td>{{ s.name }}</td>
-      <td>{{ s.age }}</td>
-    </tr>
-  </tbody>
-</table>
+<!-- <div *ngIf="age > 18; then plus18Block; else less18Block"></div>
+
+<ng-template #plus18Block>
+  <div *ngIf="age == 20; else Not20Block">
+    --------------Welcome 20------------
+  </div>
+  <ng-template #Not20Block> valid </ng-template>
+</ng-template> -->
