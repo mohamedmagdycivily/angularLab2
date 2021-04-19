@@ -1,1 +1,7 @@
-<p>reg works!</p>
+<div>
+  <input type="text" placeholder="enter name" [(ngModel)]="name" />
+  <br />
+  <input type="number" placeholder="enter age" [(ngModel)]="age" />
+  <br />
+  <input type="button" value="add" (click)="send()" />
+</div>
