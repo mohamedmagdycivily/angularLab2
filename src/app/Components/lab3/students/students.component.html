@@ -1,1 +1,15 @@
 <p>students works!</p>
+
+<h2>Students</h2>
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Age</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of allStudents">
+      <td>{{ s.name }}</td>
+      <td>{{ s.age }}</td>
+    </tr>
+  </tbody>
+</table>

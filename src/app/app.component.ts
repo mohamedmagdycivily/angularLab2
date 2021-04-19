@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularLab2';
-  // students: {}[];
-
+  students: { name: string; age: number }[] = [];
+  // students = [];
   reciveData(data) {
-    console.log(data);
-    // this.DataMnLoginInParent = data;
+    this.students.push(data);
+    console.log(this.students);
   }
 }

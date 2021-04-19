@@ -11,17 +11,24 @@ export class RegComponent implements OnInit {
   ngOnInit(): void {}
   name: string = '';
   age: number = null;
-  student: { sname: string; sage: number } = {
-    sname: this.name,
-    sage: this.age,
-  };
+  student: { name: string; age: number };
 
   @Output() myEvent = new EventEmitter();
 
   send() {
     // this.student.sname = this.name;  //error undefind
     // this.student.sage = this.age;    //error undefind
+    // let student = {
+    //   name: this.name,
+    //   age: this.age,
+    // };
+    this.student = {
+      name: this.name,
+      age: this.age,
+    };
     this.myEvent.emit(this.student);
+    this.name = '';
+    this.age = null;
 
     // console.log(this.name);
     // console.log(this.age);
