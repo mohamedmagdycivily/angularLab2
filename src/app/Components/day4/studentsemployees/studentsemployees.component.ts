@@ -8,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class StudentsemployeesComponent implements OnInit {
   constructor() {}
 
-  name;
-  age;
+  name: string;
+  age: number;
   ngOnInit(): void {}
-  Add() {}
+  Add() {
+    if (!this.name || !this.age || this.age < 18 || this.age > 60) {
+      return;
+    }
+    this.name = '';
+    this.age = null;
+    console.log('added');
+  }
 }

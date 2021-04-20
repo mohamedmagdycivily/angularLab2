@@ -12,8 +12,8 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {}
 
   ourValidation = new FormGroup({
-    name: new FormControl('Enter Name', Validators.required),
-    age: new FormControl(0, [
+    name: new FormControl('', Validators.required),
+    age: new FormControl(null, [
       Validators.min(18),
       Validators.max(60),
       Validators.required,
@@ -37,6 +37,7 @@ export class AboutComponent implements OnInit {
     if (this.ourValidation.valid) {
     }
     if (this.Age && this.Name) {
+      console.log('recieved');
     }
   }
 

@@ -12,6 +12,15 @@ import { EmployeesDetailsComponent } from './Components/day4/employees-details/e
 import { AboutComponent } from './Components/day4/about/about.component';
 import { ErrorComponent } from './Components/day4/error/error.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [
+  // {path:'', redirectTo:"employees", pathMatch:'full'},
+  { path: '', component: StudentsemployeesComponent }, //localhost:4200
+  { path: 'employees/:id', component: EmployeesDetailsComponent },
+  { path: 'about', component: AboutComponent },
+  { path: '**', component: ErrorComponent },
+];
 
 @NgModule({
   declarations: [
@@ -25,7 +34,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     AboutComponent,
     ErrorComponent,
   ],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

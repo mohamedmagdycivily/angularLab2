@@ -1,4 +1,4 @@
-<h1>hello from app.component.html</h1>
+<!-- <h1>hello from app.component.html</h1>
 <app-first></app-first>
 <br /><br /><br /><br /><br />
 <app-second></app-second>
@@ -12,9 +12,68 @@
 
 <br /><br />
 <h1>--------------------------LAB 4---------------------------------------</h1>
-<br /><br />
+<br /><br /> -->
 
-<app-studentsemployees></app-studentsemployees>
-<app-employees-details></app-employees-details>
+<!-- <app-studentsemployees></app-studentsemployees>
 <app-about></app-about>
-<app-error></app-error>
+<app-employees-details></app-employees-details>
+<app-error></app-error> -->
+
+<!--Routing-->
+<!-- <div class="container navbar">
+  <div class="row">
+    <div class="col">
+      <ul>
+        <li>
+          <a
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLinkActive="active"
+            routerLink=""
+            >Employees</a
+          >
+        </li>
+        <li>
+          <a routerLinkActive="active" routerLink="employees/20"
+            >Employee Detailes</a
+          >
+        </li>
+        <li><a routerLinkActive="active" routerLink="about">About</a></li>
+        <li><a routerLinkActive="active" routerLink="sfllsdmdsl">Error</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a
+          class="nav-link"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLinkActive="active"
+          routerLink=""
+          >Employees</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="employees/20"
+          >Employee Detailes</a
+        >
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="about"
+          >About</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="sfllsdmdsl"
+          >Error</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
