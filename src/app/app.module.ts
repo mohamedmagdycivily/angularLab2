@@ -16,7 +16,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   // {path:'', redirectTo:"employees", pathMatch:'full'},
-  { path: '', component: StudentsemployeesComponent }, //localhost:4200
+  { path: 'employees', component: StudentsemployeesComponent }, //localhost:4200
   { path: 'employees/:id', component: EmployeesDetailsComponent },
   { path: 'about', component: AboutComponent },
   { path: '**', component: ErrorComponent },
